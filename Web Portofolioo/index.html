@@ -31,6 +31,33 @@
 
           <main id="Home">
             <div class="Nama" id="Nama">
+
+              <!-- Modal -->
+              <div class="modal" id="modalDetail">
+                <div class="modal-content">
+                  <button class="close" id="closeDetail">&times;</button>
+                  <div class="atas">
+                    <div class="details" style="height: 200px; overflow-y: scroll; width: 70%;">
+                      <h1>Ahmad Faqih Arrifai!</h1>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae quae modi tenetur, minus officia provident id aspernatur nostrum explicabo cupiditate repudiandae deserunt ad in, non iste neque, est dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minus magni obcaecati accusantium suscipit in? Aperiam atque libero laudantium necessitatibus magnam enim, nam exercitationem ducimus sed praesentium! Tempore, quidem rem?
+                    </div>
+                   <div class="profile">
+                     <img src="/photo/gweh.png" alt="fagih">
+                   </div>
+                  </div>
+                  <div class="bawah">
+                    <div class="details" >
+                      <h2>Hello!</h2>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae quae modi tenetur, minus officia provident id aspernatur nostrum explicabo cupiditate repudiandae deserunt ad in, non iste neque, est dicta?
+                    </div>
+                     <div class="details">
+                      <h2>woi</h2>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae quae modi tenetur, minus officia provident id aspernatur nostrum explicabo cupiditate repudiandae deserunt ad in, non iste neque, est dicta?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="kanan">
                 <h1 class="name">FAQIH!</h1>
                 <h1 class="alt">QIH!</h1>
@@ -39,7 +66,7 @@
                   <a href="https://youtube.com/@fagihch"><i class="bi bi-youtube" style="color: red;"></i></a>
                   <a href="https://www.instagram.com/fagih_channel?utm_source=qr"><i class="bi bi-instagram" style="color: rgb(212, 0, 205);"></i></a>
                   <a href="https://github.com/LAWAGGG"><i class="bi bi-github" style="color: black;"></i></a>
-                  <a href=""><i class="bi bi-list-columns-reverse" style="color: blue;"></i></a>
+                  <i id="openDetail" class="bi bi-list-columns-reverse" style="color: blue;"></i>
               </div>
             </div>
           </main>
@@ -200,7 +227,16 @@
 
           <section id="contact">
             <div class="contacts" id="contacts">
-              <div class="shadow"></div>
+              
+              <div class="modal" id="modalAsk">
+                <div class="modal-content">
+                  <button class="close" id="closeAsk">&times;</button>
+                    <div class="AskPhoto">
+                      <img src="photo/Ask.jpeg" alt="">
+                    </div>
+                </div>
+              </div>
+
               <div class="containers">
                 <form method="" accept-charset="utf-8">
                   <h1 style="font-size: 2rem;">Contact Me!</h1>
@@ -209,7 +245,7 @@
                   <input type="text" placeholder="pesan dan kesann"/>
                   <div class="send">
                     <button type="submit">Kirimm</button>
-                    <button type="submit">Tanya?</button>
+                    <button type="submit" id="openAsk">Tanya?</button>
                   </div>
                 </form>
               </div>
