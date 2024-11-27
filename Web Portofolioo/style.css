@@ -6,6 +6,12 @@
     scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: hidden;
+}
+
 i{
     cursor: pointer;
 }
@@ -113,7 +119,7 @@ a{
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    animation: fadeIn 0.8s ease-in;
+    animation: Throw 1s ease-in-out;
 }
 
 .close{
@@ -189,6 +195,18 @@ a{
     } 
 }
 
+@keyframes Throw {
+    0%{
+        transform: translateY(200%);
+    }
+    70%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .kiri{
     position: absolute;
     display: flex;
@@ -198,7 +216,7 @@ a{
     color: black;
     padding: .5rem;
     backdrop-filter: blur(10px);
-    border-radius: 30px 0px 30px 30px;
+    border-radius: 30px 0px 35px 30px;
     width: 250px;
     font-size: 2rem;
     top:69%;
@@ -401,7 +419,7 @@ z-index: 2;
 }
 
 .Light .window{
-    border: 5px solid #999;
+    border: 5px solid rgb(233, 233, 233);
 }
 
 .window-header{
@@ -413,11 +431,11 @@ z-index: 2;
     background-color: transparent;
     padding: 1rem;
     backdrop-filter: blur(100px);
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid rgb(233, 233, 233);
 }
 
 .Light .window-header{
-    border-bottom: 5px solid #999;
+    border-bottom: 5px solid rgb(233, 233, 233);
 }
 
 .window-body{
@@ -434,7 +452,11 @@ z-index: 2;
 }
 
 .Light .window-footer{
-    border-top: 5px solid #999;
+    border-top: 5px solid rgb(233, 233, 233);
+}
+
+.Light .secTitle{
+    color: black;
 }
 
 .secTitle{
@@ -445,7 +467,7 @@ z-index: 2;
 
 .container{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     gap: 2rem;
    padding: 1rem;
 }
@@ -560,7 +582,7 @@ form{
     transition: 0.3s;
 }
 
-.containers input {
+.containers input, textarea {
     border-radius: 10px;
     width: 100%;
     padding: 1rem 1rem;
@@ -568,6 +590,7 @@ form{
     border: none;
     outline: none;
     transition: 0.3s;
+    resize: none;
 }
 
 .send button{
@@ -592,7 +615,7 @@ form{
     transform: translateY(3px);
 }
 
-@media (max-width:888px){
+@media (max-width:990px){
     .kanan{
         top:40% ;
     }
@@ -666,15 +689,13 @@ form{
     }
     .window{
         background-image: none;
-        border: none;
-        border-radius: 0;
-        border: 0;
+        border-radius: 10px;
         background-position:none;
         background-size: none;
     }
+
     .window-body,.window-header, .window-footer{
-        padding: 0;
-        border: none;
+        padding: .5rem;
         backdrop-filter: none;
     }
     .contacts{
@@ -704,14 +725,23 @@ form{
         box-shadow: 0 5px 0 grey;
     }
     .modal-content{
-        height: 300px;
+       
         width: 300px;
         gap: 0;
     }
     .details{
         font-size: .8rem;
+        background-color: transparent;
+        width: 250px !important;
+        padding: .5rem;
     }
-    .details:nth-child(1), .details:nth-child(2){
+    .atas{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .bawah{
         display: none;
     }
     .close{
