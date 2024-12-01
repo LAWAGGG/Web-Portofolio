@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+.wrapper::-webkit-scrollbar{
+    display: none;
+}
+
 body{
   overflow-x: hidden;
   overflow-y: auto;
@@ -28,7 +32,7 @@ section, main{
 
 .navBar{
     position: fixed;
-    z-index: 100;
+    z-index: 25;
     backdrop-filter: blur(5px);
     background-color: #6c6c6c23;
     width: 100vw;
@@ -52,6 +56,13 @@ section, main{
 .anchor a:hover{
     color: #408fd4;
     filter: drop-shadow(0 0 15px #cfe9ff);
+}
+.Light.navBar, .Light.navBar a{
+    color: black !important;
+}
+
+.Light.navBar i{
+    color: orange;
 }
 
 a{
@@ -154,6 +165,7 @@ a{
     transition: 0.3s;
 }
 
+
 .details:hover{
     box-shadow: 0 10px 15px #ccc;
 }
@@ -206,6 +218,32 @@ a{
         transform: translateY(0);
     }
 }
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes back {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200%);
+    }
+}
+
+.modal.hide {
+    animation: fadeOut 0.4s ease-in forwards;
+  }
+  
+  .modal-content.hide {
+    animation: back 0.3s ease-in-out forwards;
+  }
 
 .kiri{
     position: absolute;
@@ -268,7 +306,7 @@ a{
 }
 
 .Light .kanan h1{
-    background-image: linear-gradient(to top, #001556  0%, #0085f9 50%);
+    background-image: linear-gradient(to top, #003bec  0%, #001969 50%);
     background-clip: text;
     color: transparent;
 }
@@ -286,13 +324,13 @@ a{
 }
 
 .Skills{
-    height: 100vh;
+    height: 100%;
     display: flex;
     background-color: black;
     flex-direction: column;
     color: white;
     gap: 2rem;
-    padding:1rem;
+    padding:4rem;
     justify-content: center;
     align-items: center;
    
@@ -318,6 +356,7 @@ a{
     flex-direction: row;
     gap: 1.5rem;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -342,23 +381,7 @@ a{
     box-shadow: 0 0 15px rgb(191, 191, 191);
 }
 
-.card:nth-child(1){
-    transform: translate(3rem,10rem) rotate(-5deg);
-    z-index: 1;
-}
 
-.card:nth-child(2){
-    z-index: 0;
-}
-
-.card:nth-child(3){
-z-index: 1;
-    transform: translate(-3rem,10rem) rotate(5deg);
-}
-
-.card:nth-child(4){
-z-index: 2;
-} 
 
 .Light .card{
     
@@ -420,6 +443,7 @@ z-index: 2;
 
 .Light .window{
     border: 5px solid rgb(233, 233, 233);
+    background-image: none !important;;
 }
 
 .window-header{
